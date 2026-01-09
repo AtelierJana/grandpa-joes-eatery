@@ -8,6 +8,54 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
       integrity="sha512-pb1c6eVfRrF5+l6S3+KYbPB5E+V7O4gkJ8VtlM+QxB1VHZqgZFH+3dX0JlXGqslE9k9b1JkDqV6kR3lr6V6K8g==" 
       crossorigin="anonymous" referrerpolicy="no-referrer" />
+footer {
+  padding: 40px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #fff;
+  border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.social-links a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.social-links a i {
+  margin-bottom: 5px;
+}
+
+.social-links a:hover {
+  color: #ffd700;
+}
+
+.social-links span {
+  font-size: 0.85rem;
+}
+
+@media (max-width: 768px) {
+  .social-links {
+    gap: 25px;
+  }
+  .social-links a i {
+    font-size: 1.5rem;
+  }
+  .social-links span {
+    font-size: 0.75rem;
+  }
+}
 
   <style>
     /* Body + Full Background */
@@ -343,73 +391,19 @@
 <!-- Footer -->
 <footer>
   <div class="social-links">
-    <!-- Instagram -->
-    <div class="social-icon">
-      <a href="https://www.instagram.com/grandpajoeseatery" target="_blank" aria-label="Instagram">
-        <i class="fab fa-instagram fa-2x"></i>
-      </a>
-      <p>Instagram</p>
-    </div>
-
-    <!-- TikTok -->
-    <div class="social-icon">
-      <a href="https://www.tiktok.com/@grandpajoeseatery" target="_blank" aria-label="TikTok">
-        <i class="fab fa-tiktok fa-2x"></i>
-      </a>
-      <p>TikTok</p>
-    </div>
+    <a href="https://www.instagram.com/grandpajoeseatery" target="_blank" aria-label="Instagram">
+      <i class="fab fa-instagram fa-2x"></i>
+      <span>Instagram</span>
+    </a>
+    <a href="https://www.tiktok.com/@grandpajoeseatery" target="_blank" aria-label="TikTok">
+      <i class="fab fa-tiktok fa-2x"></i>
+      <span>TikTok</span>
+    </a>
   </div>
-
   <p>Website by Atelier Jana</p>
   <p>&copy; 2026 Grandpa Joe’s Eatery. All rights reserved.</p>
-
-  <style>
-    .social-links {
-      display: flex;
-      justify-content: center;
-      gap: 40px;
-      margin-bottom: 15px;
-      flex-wrap: wrap;
-    }
-
-    .social-icon {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      color: #fff;
-      text-align: center;
-      transition: 0.3s;
-    }
-
-    .social-icon a {
-      color: #fff;
-      text-decoration: none;
-      margin-bottom: 5px;
-      transition: 0.3s;
-    }
-
-    .social-icon a:hover {
-      color: #ffd700; /* gold on hover */
-    }
-
-    .social-icon p {
-      margin: 0;
-      font-size: 0.85rem;
-    }
-
-    @media (max-width: 768px) {
-      .social-links {
-        gap: 25px;
-      }
-      .social-icon i {
-        font-size: 1.5rem; /* scale icons on mobile */
-      }
-      .social-icon p {
-        font-size: 0.75rem;
-      }
-    }
-  </style>
 </footer>
+
 
 
 </body>

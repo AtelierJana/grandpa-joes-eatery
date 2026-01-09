@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Grandpa Joe’s Eatery</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      color: #fff;
+      scroll-behavior: smooth;
+      background-color: #0f0f0f;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 100;
+      background: rgba(0,0,0,0.6);
+      backdrop-filter: blur(10px);
+      box-sizing: border-box;
+    }
+
+    .left-header {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .right-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo {
+      height: 60px;
+      width: auto;
+      transition: height 0.3s ease;
+    }
+
+    .btn-menu, .btn-reserve {
+      color: #fff;
+      text-decoration: none;
+      border: 1px solid #fff;
+      padding: 10px 20px;
+      font-size: 0.9rem;
+      border-radius: 4px;
+      transition: 0.3s;
+      white-space: nowrap;
+    }
+
+    .btn-menu:hover, .btn-reserve:hover {
+      background: #fff;
+      color: #000;
+    }
+
+    /* About Hero Section with dimmed background */
+    .about-hero {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      background: url("Rimages/aboutpic.png") no-repeat center bottom;
+      background-size: cover;
+      filter: brightness(60%); /* more dim */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Overlay behind text */
+    .about-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      margin: auto;
+      padding: 40px 20px;
+      text-align: center;
+      background: rgba(0,0,0,0.8); /* darker overlay */
+      border-radius: 12px;
+      color: #fff; /* force text white */
+    }
+
+    .about-content h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+
+    .about-content p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      color: #fff;
+      margin-bottom: 25px;
+    }
+
+    .contact-info {
+      text-align: center;
+      font-size: 1.1rem;
+      color: #fff;
+      line-height: 1.8;
+    }
+
+    .contact-info span {
+      display: block;
+      margin: 8px 0;
+    }
+
+    footer {
+      padding: 40px;
+      text-align: center;
+      font-size: 0.9rem;
+      opacity: 0.6;
+      border-top: 1px solid rgba(255,255,255,0.2);
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+      header {
+        padding: 10px 20px;
+      }
+      .logo {
+        height: 45px;
+      }
+      .btn-menu, .btn-reserve {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+      }
+      .about-content h2 {
+        font-size: 2rem;
+      }
+      .about-content p, .contact-info {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="left-header">
+      <a href="index.html">
+        <img src="Rimages/logo.png" alt="Grandpa Joe’s Logo" class="logo">
+      </a>
+      <a href="menu.html" class="btn-menu">Menu</a>
+      <a href="about.html" class="btn-menu">About / Info</a>
+    </div>
+    <div class="right-header">
+      <a href="https://www.opentable.com.au/booking/restref/availability?lang=en-AU&correlationId=4b8bb2a6-4e0d-4c7d-8f49-25c03e6484fb&restRef=301454&otSource=Restaurant%20website"
+         target="_blank" class="btn-reserve">Reserve</a>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <div class="about-hero">
+    <div class="about-content">
+      <h2>Visit Grandpa Joe’s Eatery</h2>
+      <p>
+Fire, flavor, and unforgettable moments—your next craving starts here.      </p>
+
+      <div class="contact-info">
+        <span>📍 We are located at: 2 Future Pl, Truganina VIC 3029</span>
+        <span>📞 We can be contacted at: 0408 588 631</span>
+        <span>🕒 Opening Hours:</span>
+        <span>Friday: 5:30–10 pm</span>
+        <span>Saturday: 5:30–10 pm</span>
+        <span>Sunday: 5:30–10 pm</span>
+        <span>Monday – Thursday: 6 am–3 pm</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer with Social Links -->
+  <footer>
+    <div class="social-links">
+      <!-- Instagram -->
+      <div class="social-icon">
+        <a href="https://www.instagram.com/grandpajoeseatery" target="_blank" aria-label="Instagram">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="36" height="36" fill="currentColor">
+            <path d="M224,202.66A53.34,53.34,0,1,0,277.34,256,53.38,53.38,0,0,0,224,202.66Zm124.71-41a54.3,54.3,0,0,0-30.45-30.45C293.82,124,224,124,224,124s-69.82,0-94.26,7.19a54.3,54.3,0,0,0-30.45,30.45C92,150.18,92,224,92,224s0,69.82,7.19,94.26a54.3,54.3,0,0,0,30.45,30.45C154.18,356,224,356,224,356s69.82,0,94.26-7.19a54.3,54.3,0,0,0,30.45-30.45C356,293.82,356,224,356,224S356,150.18,348.71,161.66ZM224,338a82,82,0,1,1,82-82A82.09,82.09,0,0,1,224,338Zm85.2-148.8a19.2,19.2,0,1,1,19.2-19.2A19.21,19.21,0,0,1,309.2,189.2Z"/>
+          </svg>
+        </a>
+        <p>Instagram</p>
+      </div>
+
+      <!-- TikTok -->
+      <div class="social-icon">
+        <a href="https://www.tiktok.com/@grandpajoeseatery" target="_blank" aria-label="TikTok">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="36" height="36" fill="currentColor">
+            <path d="M128 0C57.31 0 0 57.31 0 128c0 70.69 57.31 128 128 128 70.69 0 128-57.31 128-128S198.69 0 128 0zm52.53 121.43h-14.2a41.48 41.48 0 0 1-14.6-2.65v40.23a46.09 46.09 0 1 1-46-46V88.88a40.94 40.94 0 0 0 30.12 11.46h.77v52.86a41.45 41.45 0 1 0 41.05-41.05V121.43z"/>
+          </svg>
+        </a>
+        <p>TikTok</p>
+      </div>
+    </div>
+    <p>Website by Atelier Jana</p>
+
+    <style>
+      .social-links {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        margin-bottom: 15px;
+        flex-wrap: wrap;
+      }
+
+      .social-icon {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: #fff;
+        font-family: 'Inter', sans-serif;
+        text-align: center;
+        transition: 0.3s;
+      }
+
+      .social-icon a {
+        color: #fff;
+        text-decoration: none;
+        margin-bottom: 5px;
+        transition: 0.3s;
+      }
+
+      .social-icon a:hover {
+        color: #ffd700; /* gold on hover */
+      }
+
+      .social-icon p {
+        margin: 0;
+        font-size: 0.85rem;
+      }
+
+      @media (max-width: 768px) {
+        .social-links {
+          gap: 25px;
+        }
+        .social-icon svg {
+          width: 28px;
+          height: 28px;
+        }
+        .social-icon p {
+          font-size: 0.75rem;
+        }
+      }
+    </style>
+  </footer>
+
+</body>
+</html>

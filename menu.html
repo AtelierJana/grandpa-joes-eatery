@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grandpa Joe’s Eatery - Menu</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    /* Body + Full Background */
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      color: #f5f5f5;
+      background-image: url("Rimages/cutlet.png");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      position: relative;
+    }
+
+    /* Overlay for readability */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.7); /* dim entire background */
+      z-index: 0;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 100;
+      background: rgba(0,0,0,0.6);
+      backdrop-filter: blur(10px);
+      box-sizing: border-box;
+    }
+
+    .logo {
+      height: 60px;
+      width: auto;
+      transition: height 0.3s ease;
+    }
+
+    .btn-back {
+      color: #fff;
+      text-decoration: none;
+      border: 1px solid #fff;
+      padding: 10px 20px;
+      font-size: 0.9rem;
+      border-radius: 4px;
+      transition: 0.3s;
+    }
+
+    .btn-back:hover {
+      background: #fff;
+      color: #000;
+    }
+
+    /* Menu Section */
+    section {
+      position: relative;
+      z-index: 1; /* above the background overlay */
+      padding: 120px 40px 60px 40px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      margin-bottom: 30px;
+      text-align: center;
+      color: #fff;
+    }
+
+    /* Card-style categories */
+    .menu-category {
+      background-color: rgba(0,0,0,0.6); /* semi-transparent overlay */
+      padding: 20px 25px;
+      border-radius: 12px;
+      margin-bottom: 40px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      transition: transform 0.2s ease;
+    }
+
+    .menu-category:hover {
+      transform: translateY(-3px);
+    }
+
+    .menu-category h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+      border-bottom: 1px solid #fff;
+      padding-bottom: 5px;
+    }
+
+    .menu-item {
+      margin-bottom: 10px;
+      transition: background 0.2s ease;
+    }
+
+    .menu-item:hover {
+      background: rgba(255,255,255,0.05);
+      padding: 5px 10px;
+      border-radius: 8px;
+    }
+
+    .menu-item-name {
+      font-weight: 600;
+      color: #fff;
+    }
+
+    .menu-item-desc {
+      font-weight: 300;
+      color: #ddd;
+      margin-left: 5px;
+    }
+
+    /* Footer */
+    footer {
+      padding: 40px;
+      text-align: center;
+      font-size: 0.9rem;
+      opacity: 0.6;
+      border-top: 1px solid rgba(255,255,255,0.2);
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+      header {
+        padding: 10px 20px;
+      }
+      .logo {
+        height: 45px;
+      }
+      .btn-back {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+      }
+      section {
+        padding: 100px 20px 40px 20px;
+      }
+      .menu-category h4 {
+        font-size: 1.3rem;
+      }
+      .menu-item-name {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <a href="index.html">
+      <img src="Rimages/logo.png" alt="Grandpa Joe’s Logo" class="logo">
+    </a>
+    <div class="nav-buttons">
+      <a href="index.html" class="btn-back">Back</a>
+    </div>
+  </header>
+
+  <!-- Menu Section -->
+  <section id="menu">
+    <h3>Our Menu</h3>
+
+    <!-- Entrée -->
+    <div class="menu-category">
+      <h4>Entrée</h4>
+      <div class="menu-item">
+        <span class="menu-item-name">Kebbe Nayeh</span> – <span class="menu-item-desc">Finely minced raw lamb mixed with fresh herbs & spices with cracked wheat.</span>
+      </div>
+      <div class="menu-item">
+        <span class="menu-item-name">Calamari Fritti</span> – <span class="menu-item-desc">Fresh calamari lightly seasoned with rice flour and spices.</span>
+      </div>
+      <div class="menu-item">
+        <span class="menu-item-name">Corn Ribs</span> – <span class="menu-item-desc">Chargrilled corn ribs tossed in house-blend spices.</span>
+      </div>
+      <div class="menu-item">
+        <span class="menu-item-name">Makaneh (Lebanese sausage)</span> – <span class="menu-item-desc">6 house-made sausages with minced meat, traditional spices, and pine nuts.</span>
+      </div>
+      <div class="menu-item">
+        <span class="menu-item-name">Batata Harra</span> – <span class="menu-item-desc">Fried diced potatoes tossed in garlic, coriander, lemon & chili.</span>
+      </div>
+      <div class="menu-item">
+        <span class="menu-item-name">Wings</span> – <span class="menu-item-desc">Chargrilled wings: Original, BBQ, or Buffalo.</span>
+      </div>
+      <div class="menu-item">
+        <span class="menu-item-name">Chilli Garlic Prawns</span> – <span class="menu-item-desc">Jumbo Australian prawns pan-fried with garlic, butter and chili.</span>
+      </div>
+    </div>
+
+    <!-- Mains -->
+    <div class="menu-category">
+      <h4>Mains</h4>
+      <div class="menu-item">
+        <span class="menu-item-name">Marinated Lamb Cutlets</span> – <span class="menu-item-desc">4 pieces of tender lamb cutlets served on creamy mash with broccolini.</span>
+      </div>
+      <div class="menu-item">
+        <span class="menu-item-name">Honey-Glazed Lamb Chops</span> – <span class="menu-item-desc">3 grilled lamb chops with sweet honey-glaze, served with mash and honey-glazed carrots.</span>
+      </div>
+      <div class="menu-item">
+        <span class="menu-item-name">Lamb Shank Mansef</span> – <span class="menu-item-desc">Tender slow-cooked lamb shanks on Lebanese Mansef rice garnished with fresh pomegranate seeds.</span>
+      </div>
+      <div class="menu-item">
+        <span class="menu-item-name">Grandpa Joe’s Platter</span> – <span class="menu-item-desc">5 diced lamb skewers, 5 Kefte skewers, 5 Tawouk skewers, 5 cutlets, 2 porterhouse pieces, large chips, large salad, large rice, 2 dips, 2 sauces.</span>
+      </div>
+      <div class="menu-item">
+        <span class="menu-item-name">Additional Skewers</span> – <span class="menu-item-desc">Tawouk, Kefteh, Lamb</span>
+      </div>
+      <div class="menu-item">
+        <span class="menu-item-name">Add-ons</span> – <span class="menu-item-desc">Egg, Corn Rib, Grilled Prawn</span>
+      </div>
+      <div class="menu-item">
+        <span class="menu-item-name">Salmon</span> – <span class="menu-item-desc">Cooked in tangy lemon, garlic, coriander sauce, served with garden salad and creamy mash.</span>
+      </div>
+    </div>
+
+    <!-- Burgers, Charcoal BBQ, Platters, Sides, Dips, Special Dinner, Mocktails -->
+    <!-- [Keep all same as before, just as menu-category cards, no background images for individual sections] -->
+
+    <!-- Burgers -->
+    <div class="menu-category">
+      <h4>Burgers</h4>
+      <div class="menu-item">
+        <span class="menu-item-name">Wagyu Beef Burger</span> – <span class="menu-item-desc">200g wagyu chuck & brisket patty, brioche bun, caramelised onion, lettuce, house sauce, tomato & American cheese. Served with chips.</span>
+      </div>
+      <div class="menu-item">
+        <span class="menu-item-name">Hawaiian Burger</span> – <span class="menu-item-desc">150g Black Angus beef patty, pulled brisket, brioche bun, grilled pineapple, lettuce, tomato, cheese & house sauce. Served with chips.</span>
+      </div>
+      <div class="menu-item">
+        <span class="menu-item-name">Smashed Beef Burger</span> – <span class="menu-item-desc">150g Black Angus patty, American cheese, house sauce, caramelised onions, brioche bun. Served with chips.</span>
+      </div>
+      <div class="menu-item">
+        <span class="menu-item-name">Chicken Burger</span> – <span class="menu-item-desc">Lightly marinated & crumbed breast fillet, brioche bun, pickles, coleslaw, aioli, chipotle mayo. Served with chips.</span>
+      </div>
+    </div>
+
+    <!-- Charcoal BBQ -->
+    <div class="menu-category">
+      <h4>Charcoal BBQ</h4>
+      <div class="menu-item">
+        <span class="menu-item-name">300g MS 3 Black Angus Scotch Fillet</span> – <span class="menu-item-desc">Served with garden salad, chips, choice of sauce (peppercorn, mushroom, gravy).</span>
+      </div>
+      <div class="menu-item">
+        <span class="menu-item-name">350g MS 3 Porterhouse</span> – <span class="menu-item-desc">Served with garden salad, chips, choice of sauce.</span>
+      </div>
+      <div class="menu-item">
+        <span class="menu-item-name">300g Wagyu MS 8-9 Scotch Fillet</span> – <span class="menu-item-desc">Served with garden salad, chips, choice of sauce.</span>
+      </div>
+      <div class="menu-item">
+        <span class="menu-item-name">500g Bone-In Ribeye</span> – <span class="menu-item-desc">Served with garden salad, chips, choice of sauce.</span>
+      </div>
+    </div>
+
+    <!-- Platters -->
+    <div class="menu-category">
+      <h4>Platters</h4>
+      <div class="menu-item">
+        <span class="menu-item-name">Shish Tawouk</span> – <span class="menu-item-desc">3 marinated diced breast fillet skewers on a bed of rice, served with garden salad, chips & hummus or garlic dip.</span>
+      </div>
+      <div class="menu-item">
+        <span class="menu-item-name">Kefteh</span> – <span class="menu-item-desc">3 skewers of minced meat seasoned with parsley, onion & spices on a bed of rice, served with garden salad, chips & dip.</span>
+      </div>
+      <div class="menu-item">
+        <span class="menu-item-name">Diced Lamb</span> – <span class="menu-item-desc">3 diced lamb fillet & shoulder skewers on a bed of rice, served with garden salad, chips & dip.</span>
+      </div>
+      <div class="menu-item">
+        <span class="menu-item-name">Mix Platter</span> – <span class="menu-item-desc">1 diced lamb skewer, 1 shish, 1 kefte on a bed of rice, served with garden salad, chips & dip.</span>
+      </div>
+    </div>
+
+    <!-- Sides -->
+    <div class="menu-category">
+      <h4>Sides</h4>
+      <div class="menu-item"><span class="menu-item-name">Fattoush</span></div>
+      <div class="menu-item"><span class="menu-item-name">Tabbouleh</span></div>
+      <div class="menu-item"><span class="menu-item-name">Garden Salad</span></div>
+      <div class="menu-item"><span class="menu-item-name">Wedges</span></div>
+      <div class="menu-item"><span class="menu-item-name">Chips</span></div>
+      <div class="menu-item"><span class="menu-item-name">Mixed Salad</span></div>
+    </div>
+
+    <!-- Dips -->
+    <div class="menu-category">
+      <h4>Dips</h4>
+      <div class="menu-item"><span class="menu-item-name">Hummus</span></div>
+      <div class="menu-item"><span class="menu-item-name">Garlic Dip</span></div>
+    </div>
+
+    <!-- Special Dinner -->
+    <div class="menu-category">
+      <h4>Special Dinner</h4>
+      <div class="menu-item">
+        <span class="menu-item-name">Brisket Rigatoni</span> – <span class="menu-item-desc">Slow-cooked wagyu brisket in rich ragu sauce topped with shaved parmesan.</span>
+      </div>
+      <div class="menu-item">
+        <span class="menu-item-name">Chicken Allo Funghi</span> – <span class="menu-item-desc">Chicken tossed in creamy mushroom sauce with Parmesan served over pasta.</span>
+      </div>
+      <div class="menu-item">
+        <span class="menu-item-name">Spaghetti & Meatballs</span> – <span class="menu-item-desc">Spaghetti in slow-cooked Bolognese with homemade meatballs & Parmesan.</span>
+      </div>
+      <div class="menu-item">
+        <span class="menu-item-name">BBQ Lamb Ribs</span> – <span class="menu-item-desc">Tender lamb ribs slow cooked, topped with BBQ sauce, served with coleslaw & chips.</span>
+      </div>
+    </div>
+
+    <!-- Mocktails -->
+    <div class="menu-category">
+      <h4>Mocktails</h4>
+      <div class="menu-item">
+        <span class="menu-item-name">Virgin Mojito</span> – <span class="menu-item-desc">Mint, lime, brown sugar, sprite.</span>
+      </div>
+      <div class="menu-item">
+        <span class="menu-item-name">Pirato Jr</span> – <span class="menu-item-desc">Passionfruit, lime & orange bitters.</span>
+      </div>
+      <div class="menu-item">
+        <span class="menu-item-name">Lemon & Mint</span> – <span class="menu-item-desc">Fresh lemon, mint & sugar blended Lebanese style.</span>
+      </div>
+      <div class="menu-item">
+        <span class="menu-item-name">Grandpa Joe's Banger</span> – <span class="menu-item-desc">Orange juice, raspberry, lime & lemonade.</span>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Footer with Social Links -->
+  <footer>
+    <div class="social-links">
+      <!-- Instagram -->
+      <div class="social-icon">
+        <a href="https://www.instagram.com/grandpajoeseatery" target="_blank" aria-label="Instagram">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="36" height="36" fill="currentColor">
+            <path d="M224,202.66A53.34,53.34,0,1,0,277.34,256,53.38,53.38,0,0,0,224,202.66Zm124.71-41a54.3,54.3,0,0,0-30.45-30.45C293.82,124,224,124,224,124s-69.82,0-94.26,7.19a54.3,54.3,0,0,0-30.45,30.45C92,150.18,92,224,92,224s0,69.82,7.19,94.26a54.3,54.3,0,0,0,30.45,30.45C154.18,356,224,356,224,356s69.82,0,94.26-7.19a54.3,54.3,0,0,0,30.45-30.45C356,293.82,356,224,356,224S356,150.18,348.71,161.66ZM224,338a82,82,0,1,1,82-82A82.09,82.09,0,0,1,224,338Zm85.2-148.8a19.2,19.2,0,1,1,19.2-19.2A19.21,19.21,0,0,1,309.2,189.2Z"/>
+          </svg>
+        </a>
+        <p>Instagram</p>
+      </div>
+
+      <!-- TikTok -->
+      <div class="social-icon">
+        <a href="https://www.tiktok.com/@grandpajoeseatery" target="_blank" aria-label="TikTok">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="36" height="36" fill="currentColor">
+            <path d="M128 0C57.31 0 0 57.31 0 128c0 70.69 57.31 128 128 128 70.69 0 128-57.31 128-128S198.69 0 128 0zm52.53 121.43h-14.2a41.48 41.48 0 0 1-14.6-2.65v40.23a46.09 46.09 0 1 1-46-46V88.88a40.94 40.94 0 0 0 30.12 11.46h.77v52.86a41.45 41.45 0 1 0 41.05-41.05V121.43z"/>
+          </svg>
+        </a>
+        <p>TikTok</p>
+      </div>
+    </div>
+    <p>Website by Atelier Jana</p>
+
+    <style>
+      .social-links {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        margin-bottom: 15px;
+        flex-wrap: wrap;
+      }
+
+      .social-icon {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: #fff;
+        font-family: 'Inter', sans-serif;
+        text-align: center;
+        transition: 0.3s;
+      }
+
+      .social-icon a {
+        color: #fff;
+        text-decoration: none;
+        margin-bottom: 5px;
+        transition: 0.3s;
+      }
+
+      .social-icon a:hover {
+        color: #ffd700; /* gold on hover */
+      }
+
+      .social-icon p {
+        margin: 0;
+        font-size: 0.85rem;
+      }
+
+      @media (max-width: 768px) {
+        .social-links {
+          gap: 25px;
+        }
+        .social-icon svg {
+          width: 28px;
+          height: 28px;
+        }
+        .social-icon p {
+          font-size: 0.75rem;
+        }
+      }
+    </style>
+  </footer>
+</body>
+</html>

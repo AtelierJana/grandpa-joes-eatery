@@ -8,36 +8,48 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
       integrity="sha512-pb1c6eVfRrF5+l6S3+KYbPB5E+V7O4gkJ8VtlM+QxB1VHZqgZFH+3dX0JlXGqslE9k9b1JkDqV6kR3lr6V6K8g==" 
       crossorigin="anonymous" referrerpolicy="no-referrer" />
-.social-links {
+
+
+  <style>
+    .social-links {
   display: flex;
   justify-content: center;
-  gap: 40px;
-  margin-bottom: 15px;
+  gap: 50px;
   flex-wrap: wrap;
+  margin-bottom: 15px;
 }
 
 .social-links a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-decoration: none;
   color: #fff;
+  text-decoration: none;
   transition: 0.3s;
 }
 
 .social-links a i,
 .social-links a svg {
-  margin-bottom: 5px;
   width: 36px;
   height: 36px;
+  margin-bottom: 5px;
 }
 
 .social-links a:hover {
-  color: #ffd700;
+  color: #ffd700; /* gold on hover */
 }
 
 .social-links span {
   font-size: 0.85rem;
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 0.9rem;
+  color: #f5f5f5;
+  border-top: 1px solid rgba(255,255,255,0.2);
 }
 
 @media (max-width: 768px) {
@@ -52,10 +64,12 @@
   .social-links span {
     font-size: 0.75rem;
   }
+  footer {
+    padding: 30px 10px;
+    font-size: 0.85rem;
+  }
 }
 
-
-  <style>
     /* Body + Full Background */
     body {
       margin: 0;
@@ -386,14 +400,16 @@
   </section>
 
   <!-- Footer with Social Links -->
+<!-- Footer -->
 <footer>
   <div class="social-links">
+    <!-- Instagram -->
     <a href="https://www.instagram.com/grandpajoeseatery" target="_blank" aria-label="Instagram">
       <i class="fab fa-instagram fa-2x"></i>
       <span>Instagram</span>
     </a>
 
-    <!-- TikTok as SVG since FA free doesn't support it -->
+    <!-- TikTok (SVG icon) -->
     <a href="https://www.tiktok.com/@grandpajoeseatery" target="_blank" aria-label="TikTok">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="36" height="36" fill="currentColor">
         <path d="M128 0C57.31 0 0 57.31 0 128c0 70.69 57.31 128 128 128 70.69 0 128-57.31 128-128S198.69 0 128 0zm52.53 121.43h-14.2a41.48 41.48 0 0 1-14.6-2.65v40.23a46.09 46.09 0 1 1-46-46V88.88a40.94 40.94 0 0 0 30.12 11.46h.77v52.86a41.45 41.45 0 1 0 41.05-41.05V121.43z"/>
@@ -405,6 +421,7 @@
   <p>Website by Atelier Jana</p>
   <p>&copy; 2026 Grandpa Joe’s Eatery. All rights reserved.</p>
 </footer>
+
 
 
 

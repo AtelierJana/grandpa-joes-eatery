@@ -11,6 +11,43 @@
 
 
   <style>
+
+    .menu-item {
+  position: relative;
+  padding-right: 60px; /* space for price on desktop */
+}
+
+.menu-item-price {
+  position: absolute;
+  right: 10px;
+  top: 0;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* Mobile friendly: wrap descriptions and keep price visible */
+@media (max-width: 768px) {
+  .menu-item {
+    position: static;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .menu-item-desc {
+    margin-left: 10px;
+    flex: 1;
+  }
+
+  .menu-item-price {
+    position: static;
+    margin-left: 10px;
+    white-space: nowrap;
+  }
+}
+
     .social-links {
   display: flex;
   justify-content: center;
@@ -236,166 +273,162 @@ footer {
   </header>
 
   <!-- Menu Section -->
-  <section id="menu">
-    <h3>Our Menu</h3>
+<section id="menu">
+  <h3>Our Menu</h3>
 
-    <!-- Entrée -->
-    <div class="menu-category">
-      <h4>Entrée</h4>
-      <div class="menu-item">
-        <span class="menu-item-name">Kebbe Nayeh</span> – <span class="menu-item-desc">Finely minced raw lamb mixed with fresh herbs & spices with cracked wheat.</span>
-      </div>
-      <div class="menu-item">
-        <span class="menu-item-name">Calamari Fritti</span> – <span class="menu-item-desc">Fresh calamari lightly seasoned with rice flour and spices.</span>
-      </div>
-      <div class="menu-item">
-        <span class="menu-item-name">Corn Ribs</span> – <span class="menu-item-desc">Chargrilled corn ribs tossed in house-blend spices.</span>
-      </div>
-      <div class="menu-item">
-        <span class="menu-item-name">Makaneh (Lebanese sausage)</span> – <span class="menu-item-desc">6 house-made sausages with minced meat, traditional spices, and pine nuts.</span>
-      </div>
-      <div class="menu-item">
-        <span class="menu-item-name">Batata Harra</span> – <span class="menu-item-desc">Fried diced potatoes tossed in garlic, coriander, lemon & chili.</span>
-      </div>
-      <div class="menu-item">
-        <span class="menu-item-name">Wings</span> – <span class="menu-item-desc">Chargrilled wings: Original, BBQ, or Buffalo.</span>
-      </div>
-      <div class="menu-item">
-        <span class="menu-item-name">Chilli Garlic Prawns</span> – <span class="menu-item-desc">Jumbo Australian prawns pan-fried with garlic, butter and chili.</span>
-      </div>
+  <!-- Entrée -->
+  <div class="menu-category">
+    <h4>Entrée</h4>
+    <div class="menu-item">
+      <span class="menu-item-name">Kebbe Nayeh</span> – 
+      <span class="menu-item-desc">Finely minced raw lamb mixed with fresh herbs & spices with cracked wheat.</span>
+      <span class="menu-item-price">12 / 25</span>
     </div>
-
-    <!-- Mains -->
-    <div class="menu-category">
-      <h4>Mains</h4>
-      <div class="menu-item">
-        <span class="menu-item-name">Marinated Lamb Cutlets</span> – <span class="menu-item-desc">4 pieces of tender lamb cutlets served on creamy mash with broccolini.</span>
-      </div>
-      <div class="menu-item">
-        <span class="menu-item-name">Honey-Glazed Lamb Chops</span> – <span class="menu-item-desc">3 grilled lamb chops with sweet honey-glaze, served with mash and honey-glazed carrots.</span>
-      </div>
-      <div class="menu-item">
-        <span class="menu-item-name">Lamb Shank Mansef</span> – <span class="menu-item-desc">Tender slow-cooked lamb shanks on Lebanese Mansef rice garnished with fresh pomegranate seeds.</span>
-      </div>
-      <div class="menu-item">
-        <span class="menu-item-name">Grandpa Joe’s Platter</span> – <span class="menu-item-desc">5 diced lamb skewers, 5 Kefte skewers, 5 Tawouk skewers, 5 cutlets, 2 porterhouse pieces, large chips, large salad, large rice, 2 dips, 2 sauces.</span>
-      </div>
-      <div class="menu-item">
-        <span class="menu-item-name">Additional Skewers</span> – <span class="menu-item-desc">Tawouk, Kefteh, Lamb</span>
-      </div>
-      <div class="menu-item">
-        <span class="menu-item-name">Add-ons</span> – <span class="menu-item-desc">Egg, Corn Rib, Grilled Prawn</span>
-      </div>
-      <div class="menu-item">
-        <span class="menu-item-name">Salmon</span> – <span class="menu-item-desc">Cooked in tangy lemon, garlic, coriander sauce, served with garden salad and creamy mash.</span>
-      </div>
+    <div class="menu-item">
+      <span class="menu-item-name">Calamari Fritti</span> – 
+      <span class="menu-item-desc">Fresh calamari lightly seasoned with rice flour and spices.</span>
+      <span class="menu-item-price">18</span>
     </div>
-
-    <!-- Burgers, Charcoal BBQ, Platters, Sides, Dips, Special Dinner, Mocktails -->
-    <!-- [Keep all same as before, just as menu-category cards, no background images for individual sections] -->
-
-    <!-- Burgers -->
-    <div class="menu-category">
-      <h4>Burgers</h4>
-      <div class="menu-item">
-        <span class="menu-item-name">Wagyu Beef Burger</span> – <span class="menu-item-desc">200g wagyu chuck & brisket patty, brioche bun, caramelised onion, lettuce, house sauce, tomato & American cheese. Served with chips.</span>
-      </div>
-      <div class="menu-item">
-        <span class="menu-item-name">Hawaiian Burger</span> – <span class="menu-item-desc">150g Black Angus beef patty, pulled brisket, brioche bun, grilled pineapple, lettuce, tomato, cheese & house sauce. Served with chips.</span>
-      </div>
-      <div class="menu-item">
-        <span class="menu-item-name">Smashed Beef Burger</span> – <span class="menu-item-desc">150g Black Angus patty, American cheese, house sauce, caramelised onions, brioche bun. Served with chips.</span>
-      </div>
-      <div class="menu-item">
-        <span class="menu-item-name">Chicken Burger</span> – <span class="menu-item-desc">Lightly marinated & crumbed breast fillet, brioche bun, pickles, coleslaw, aioli, chipotle mayo. Served with chips.</span>
-      </div>
+    <div class="menu-item">
+      <span class="menu-item-name">Corn Ribs</span> – 
+      <span class="menu-item-desc">Chargrilled corn ribs tossed in house-blend spices.</span>
+      <span class="menu-item-price">9</span>
     </div>
-
-    <!-- Charcoal BBQ -->
-    <div class="menu-category">
-      <h4>Charcoal BBQ</h4>
-      <div class="menu-item">
-        <span class="menu-item-name">300g MS 3 Black Angus Scotch Fillet</span> – <span class="menu-item-desc">Served with garden salad, chips, choice of sauce (peppercorn, mushroom, gravy).</span>
-      </div>
-      <div class="menu-item">
-        <span class="menu-item-name">350g MS 3 Porterhouse</span> – <span class="menu-item-desc">Served with garden salad, chips, choice of sauce.</span>
-      </div>
-      <div class="menu-item">
-        <span class="menu-item-name">300g Wagyu MS 8-9 Scotch Fillet</span> – <span class="menu-item-desc">Served with garden salad, chips, choice of sauce.</span>
-      </div>
-      <div class="menu-item">
-        <span class="menu-item-name">500g Bone-In Ribeye</span> – <span class="menu-item-desc">Served with garden salad, chips, choice of sauce.</span>
-      </div>
+    <div class="menu-item">
+      <span class="menu-item-name">Makaneh (Lebanese sausage)</span> – 
+      <span class="menu-item-desc">6 house-made sausages with minced meat, traditional spices, and pine nuts.</span>
+      <span class="menu-item-price">10</span>
     </div>
-
-    <!-- Platters -->
-    <div class="menu-category">
-      <h4>Platters</h4>
-      <div class="menu-item">
-        <span class="menu-item-name">Shish Tawouk</span> – <span class="menu-item-desc">3 marinated diced breast fillet skewers on a bed of rice, served with garden salad, chips & hummus or garlic dip.</span>
-      </div>
-      <div class="menu-item">
-        <span class="menu-item-name">Kefteh</span> – <span class="menu-item-desc">3 skewers of minced meat seasoned with parsley, onion & spices on a bed of rice, served with garden salad, chips & dip.</span>
-      </div>
-      <div class="menu-item">
-        <span class="menu-item-name">Diced Lamb</span> – <span class="menu-item-desc">3 diced lamb fillet & shoulder skewers on a bed of rice, served with garden salad, chips & dip.</span>
-      </div>
-      <div class="menu-item">
-        <span class="menu-item-name">Mix Platter</span> – <span class="menu-item-desc">1 diced lamb skewer, 1 shish, 1 kefte on a bed of rice, served with garden salad, chips & dip.</span>
-      </div>
+    <div class="menu-item">
+      <span class="menu-item-name">Batata Harra</span> – 
+      <span class="menu-item-desc">Fried diced potatoes tossed in garlic, coriander, lemon & chili.</span>
+      <span class="menu-item-price">8 / 15</span>
     </div>
-
-    <!-- Sides -->
-    <div class="menu-category">
-      <h4>Sides</h4>
-      <div class="menu-item"><span class="menu-item-name">Fattoush</span></div>
-      <div class="menu-item"><span class="menu-item-name">Tabbouleh</span></div>
-      <div class="menu-item"><span class="menu-item-name">Garden Salad</span></div>
-      <div class="menu-item"><span class="menu-item-name">Wedges</span></div>
-      <div class="menu-item"><span class="menu-item-name">Chips</span></div>
-      <div class="menu-item"><span class="menu-item-name">Mixed Salad</span></div>
+    <div class="menu-item">
+      <span class="menu-item-name">Wings</span> – 
+      <span class="menu-item-desc">Chargrilled wings: Original, BBQ, or Buffalo.</span>
+      <span class="menu-item-price">10 for 10</span>
     </div>
-
-    <!-- Dips -->
-    <div class="menu-category">
-      <h4>Dips</h4>
-      <div class="menu-item"><span class="menu-item-name">Hummus</span></div>
-      <div class="menu-item"><span class="menu-item-name">Garlic Dip</span></div>
+    <div class="menu-item">
+      <span class="menu-item-name">Chilli Garlic Prawns</span> – 
+      <span class="menu-item-desc">Jumbo Australian prawns pan-fried with garlic, butter and chili.</span>
+      <span class="menu-item-price">27</span>
     </div>
+  </div>
 
-    <!-- Special Dinner -->
-    <div class="menu-category">
-      <h4>Special Dinner</h4>
-      <div class="menu-item">
-        <span class="menu-item-name">Brisket Rigatoni</span> – <span class="menu-item-desc">Slow-cooked wagyu brisket in rich ragu sauce topped with shaved parmesan.</span>
-      </div>
-      <div class="menu-item">
-        <span class="menu-item-name">Chicken Allo Funghi</span> – <span class="menu-item-desc">Chicken tossed in creamy mushroom sauce with Parmesan served over pasta.</span>
-      </div>
-      <div class="menu-item">
-        <span class="menu-item-name">Spaghetti & Meatballs</span> – <span class="menu-item-desc">Spaghetti in slow-cooked Bolognese with homemade meatballs & Parmesan.</span>
-      </div>
-      <div class="menu-item">
-        <span class="menu-item-name">BBQ Lamb Ribs</span> – <span class="menu-item-desc">Tender lamb ribs slow cooked, topped with BBQ sauce, served with coleslaw & chips.</span>
-      </div>
+  <!-- Mains -->
+  <div class="menu-category">
+    <h4>Mains</h4>
+    <div class="menu-item">
+      <span class="menu-item-name">Marinated Lamb Cutlets</span> – 
+      <span class="menu-item-desc">4 pieces of tender lamb cutlets served on creamy mash with broccolini.</span>
+      <span class="menu-item-price">39</span>
     </div>
+    <div class="menu-item">
+      <span class="menu-item-name">Honey-Glazed Lamb Chops</span> – 
+      <span class="menu-item-desc">3 grilled lamb chops with sweet honey-glaze, served with mash and honey-glazed carrots.</span>
+      <span class="menu-item-price">35</span>
+    </div>
+    <div class="menu-item">
+      <span class="menu-item-name">Lamb Shank Mansef</span> – 
+      <span class="menu-item-desc">Tender slow-cooked lamb shanks on Lebanese Mansef rice garnished with fresh pomegranate seeds.</span>
+      <span class="menu-item-price">29</span>
+    </div>
+  </div>
 
-    <!-- Mocktails -->
-    <div class="menu-category">
-      <h4>Mocktails</h4>
-      <div class="menu-item">
-        <span class="menu-item-name">Virgin Mojito</span> – <span class="menu-item-desc">Mint, lime, brown sugar, sprite.</span>
-      </div>
-      <div class="menu-item">
-        <span class="menu-item-name">Pirato Jr</span> – <span class="menu-item-desc">Passionfruit, lime & orange bitters.</span>
-      </div>
-      <div class="menu-item">
-        <span class="menu-item-name">Lemon & Mint</span> – <span class="menu-item-desc">Fresh lemon, mint & sugar blended Lebanese style.</span>
-      </div>
-      <div class="menu-item">
-        <span class="menu-item-name">Grandpa Joe's Banger</span> – <span class="menu-item-desc">Orange juice, raspberry, lime & lemonade.</span>
-      </div>
+  <!-- Share Platters -->
+  <div class="menu-category">
+    <h4>Share Platters</h4>
+    <div class="menu-item">
+      <span class="menu-item-name">Grandpa Joe’s Platter</span> – 
+      <span class="menu-item-desc">5 diced lamb skewers, 5 Kefte skewers, 5 Tawouk skewers, 5 cutlets, 2 porterhouse pieces, large chips, large salad, large rice, 2 dips, 2 sauces.</span>
+      <span class="menu-item-price">220</span>
     </div>
+    <div class="menu-item">
+      <span class="menu-item-name">Family Bundle</span> – 
+      <span class="menu-item-desc">1kg diced lamb, 1kg Kefteh skewers, 1kg Tawouk skewers</span>
+      <span class="menu-item-price">55 / 50 / 45</span>
+    </div>
+  </div>
+
+  <!-- Additional Skewers & Add-ons -->
+  <div class="menu-category">
+    <h4>Additional Skewers</h4>
+    <div class="menu-item"><span class="menu-item-name">Tawouk</span><span class="menu-item-price">8 each</span></div>
+    <div class="menu-item"><span class="menu-item-name">Kefteh</span><span class="menu-item-price">8 each</span></div>
+    <div class="menu-item"><span class="menu-item-name">Lamb</span><span class="menu-item-price">10 each</span></div>
+  </div>
+
+  <div class="menu-category">
+    <h4>Add-ons</h4>
+    <div class="menu-item"><span class="menu-item-name">Egg</span><span class="menu-item-price">3</span></div>
+    <div class="menu-item"><span class="menu-item-name">Corn Rib</span><span class="menu-item-price">5</span></div>
+    <div class="menu-item"><span class="menu-item-name">Grilled Prawn</span><span class="menu-item-price">8</span></div>
+  </div>
+
+  <!-- Burgers -->
+  <div class="menu-category">
+    <h4>Burgers</h4>
+    <div class="menu-item"><span class="menu-item-name">Wagyu Beef Burger</span> – <span class="menu-item-desc">200g wagyu chuck & brisket patty, brioche bun, caramelised onion, lettuce, house sauce, tomato & American cheese. Served with chips.</span><span class="menu-item-price">27</span></div>
+    <div class="menu-item"><span class="menu-item-name">Smashed Beef Burger</span> – <span class="menu-item-desc">150g Black Angus patty, American cheese, house sauce, caramelised onions, brioche bun. Served with chips.</span><span class="menu-item-price">24</span></div>
+    <div class="menu-item"><span class="menu-item-name">Hawaiian Burger</span> – <span class="menu-item-desc">150g Black Angus beef patty, pulled brisket, brioche bun, grilled pineapple, lettuce, tomato, cheese & house sauce. Served with chips.</span><span class="menu-item-price">27</span></div>
+    <div class="menu-item"><span class="menu-item-name">Chicken Burger</span> – <span class="menu-item-desc">Lightly marinated & crumbed breast fillet, brioche bun, pickles, coleslaw, aioli, chipotle mayo. Served with chips.</span><span class="menu-item-price">22</span></div>
+  </div>
+
+  <!-- Charcoal BBQ -->
+  <div class="menu-category">
+    <h4>Charcoal BBQ</h4>
+    <div class="menu-item"><span class="menu-item-name">Black Angus Scotch Fillet</span><span class="menu-item-price">44</span></div>
+    <div class="menu-item"><span class="menu-item-name">Porterhouse</span><span class="menu-item-price">39</span></div>
+    <div class="menu-item"><span class="menu-item-name">Bone-In Ribeye</span><span class="menu-item-price">50</span></div>
+    <div class="menu-item"><span class="menu-item-name">Wagyu Scotch Fillet</span><span class="menu-item-price">59</span></div>
+  </div>
+
+  <!-- Platters -->
+  <div class="menu-category">
+    <h4>Platters</h4>
+    <div class="menu-item"><span class="menu-item-name">Shish Tawouk</span><span class="menu-item-price">25</span></div>
+    <div class="menu-item"><span class="menu-item-name">Diced Lamb</span><span class="menu-item-price">25</span></div>
+    <div class="menu-item"><span class="menu-item-name">Kefteh</span><span class="menu-item-price">28</span></div>
+    <div class="menu-item"><span class="menu-item-name">Mix Platter</span><span class="menu-item-price">30</span></div>
+  </div>
+
+  <!-- Sides -->
+  <div class="menu-category">
+    <h4>Sides</h4>
+    <div class="menu-item"><span class="menu-item-name">Fattoush</span><span class="menu-item-price">10 / 19</span></div>
+    <div class="menu-item"><span class="menu-item-name">Wedges</span><span class="menu-item-price">9 / 13</span></div>
+    <div class="menu-item"><span class="menu-item-name">Tabbouleh</span><span class="menu-item-price">10 / 19</span></div>
+    <div class="menu-item"><span class="menu-item-name">Chips</span><span class="menu-item-price">7 / 10</span></div>
+    <div class="menu-item"><span class="menu-item-name">Garden Salad</span><span class="menu-item-price">7 / 13</span></div>
+  </div>
+
+  <!-- Dips -->
+  <div class="menu-category">
+    <h4>Dips</h4>
+    <div class="menu-item"><span class="menu-item-name">Hummus</span><span class="menu-item-price">8</span></div>
+    <div class="menu-item"><span class="menu-item-name">Garlic Dip</span><span class="menu-item-price">8</span></div>
+  </div>
+
+  <!-- Special Dinner -->
+  <div class="menu-category">
+    <h4>Special Dinner</h4>
+    <div class="menu-item"><span class="menu-item-name">Brisket Rigatoni</span><span class="menu-item-price">28</span></div>
+    <div class="menu-item"><span class="menu-item-name">Chicken Allo Funghi</span><span class="menu-item-price">22</span></div>
+    <div class="menu-item"><span class="menu-item-name">Spaghetti & Meatballs</span><span class="menu-item-price">24</span></div>
+    <div class="menu-item"><span class="menu-item-name">BBQ Lamb Ribs</span><span class="menu-item-price">33</span></div>
+  </div>
+
+  <!-- Mocktails -->
+  <div class="menu-category">
+    <h4>Mocktails</h4>
+    <div class="menu-item"><span class="menu-item-name">Virgin Mojito</span><span class="menu-item-price">12</span></div>
+    <div class="menu-item"><span class="menu-item-name">Pirato Jr</span><span class="menu-item-price">12</span></div>
+    <div class="menu-item"><span class="menu-item-name">Lemon & Mint</span><span class="menu-item-price">12</span></div>
+    <div class="menu-item"><span class="menu-item-name">Grandpa Joe's Banger</span><span class="menu-item-price">12</span></div>
+  </div>
+</section>
+
 
   </section>
 

@@ -13,6 +13,78 @@
 
 
   <style>
+.reviews-section {
+  background-color: #f7f5f2;
+  padding: 80px 20px;
+}
+
+.reviews-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.reviews-section h2 {
+  font-size: 36px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.reviews-subtitle {
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #888;
+  margin-bottom: 50px;
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.review-card {
+  background: #ffffff;
+  padding: 35px 30px;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.stars {
+  color: #c9a24d;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.review-text {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.review-author {
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #777;
+}
+
+.google-link {
+  display: inline-block;
+  margin-top: 40px;
+  font-size: 14px;
+  text-decoration: none;
+  color: #000;
+  border-bottom: 1px solid #c9a24d;
+  padding-bottom: 3px;
+}
+
+.google-link:hover {
+  color: #c9a24d;
+}
 
     .social-links {
   display: flex;
@@ -113,6 +185,46 @@ footer {
       width: auto;
       transition: height 0.3s ease;
     }
+<section class="reviews-section">
+  <div class="reviews-container">
+    <h2>Guest Experiences</h2>
+    <p class="reviews-subtitle">Based on Google Reviews</p>
+
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p class="review-text">
+          An exceptional dining experience. Every dish was crafted to perfection.
+        </p>
+        <span class="review-author">— Olivia M.</span>
+      </div>
+
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p class="review-text">
+          Elegant atmosphere, incredible flavours, and outstanding service.
+        </p>
+        <span class="review-author">— James R.</span>
+      </div>
+
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p class="review-text">
+          A hidden gem. From the ambience to the desserts, absolutely flawless.
+        </p>
+        <span class="review-author">— Amina K.</span>
+      </div>
+    </div>
+
+    <a
+      href="https://www.google.com/maps"
+      target="_blank"
+      class="google-link"
+    >
+      View all reviews on Google
+    </a>
+  </div>
+</section>
 
     /* Navigation / Buttons */
     .btn-menu, .btn-reserve {

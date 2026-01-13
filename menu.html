@@ -25,28 +25,50 @@
   color: #fff;
 }
 
-/* Mobile friendly: wrap descriptions and keep price visible */
+.menu-item {
+  position: relative;
+  padding-right: 60px; /* desktop price space */
+}
+
+/* Price on the right for desktop */
+.menu-item-price {
+  position: absolute;
+  right: 10px;
+  top: 0;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* Mobile phone styling */
 @media (max-width: 768px) {
   .menu-item {
-    position: static;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
+    position: static;
     padding-right: 0;
     margin-bottom: 10px;
   }
 
+  .menu-item-name {
+    flex: 1 1 100%;
+    margin-bottom: 2px;
+  }
+
   .menu-item-desc {
-    margin-left: 10px;
-    flex: 1;
+    flex: 1 1 70%;
+    margin-left: 0;
   }
 
   .menu-item-price {
-    position: static;
+    flex: 0 0 auto;
     margin-left: 10px;
     white-space: nowrap;
+    margin-top: 2px;
   }
 }
+
 
     .social-links {
   display: flex;
